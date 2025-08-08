@@ -1,0 +1,33 @@
+# Visual Studio / Rider / VS Code temp files
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Tt]est[Rr]esult*/
+x64/
+x86/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+
+# NuGet packages
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+*.nuspec
+
+# Others
+node_modules/
+wwwroot/lib/
+dist/
+tmp/

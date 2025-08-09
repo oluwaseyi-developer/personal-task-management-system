@@ -1,15 +1,14 @@
-﻿using System.Security.Principal;
-using TaskManagementSystem.Domain.Enums;
+﻿using TaskManagementSystem.Domain.Enums;
 
 namespace TaskManagementSystem.Domain.Entities
 {
-    public class UserProfiles
+    public class UserProfile
     {
         public Guid Id { get; set; }
         public string FirstName { get; set; } = string.Empty;
         public string SecondName { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
-        public Role  Role { get; set; }
+        public Role  Role { get; set; } 
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;

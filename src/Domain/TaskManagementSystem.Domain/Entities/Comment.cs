@@ -5,10 +5,8 @@
         public Guid Id { get; set; }
         public Guid TaskId { get; set; }
         public Guid AuthorId { get; set; }
-        public string Remark { get; set; } = string.Empty;
+        public string Content { get; set; } = string.Empty;
 
-        public Task Task { get; set; }
-        public UserProfiles Author { get; set; }
-        
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 }

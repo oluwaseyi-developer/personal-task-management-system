@@ -10,15 +10,12 @@ namespace TaskManagementSystem.Domain.Entities
         public string? Description { get; set; }
 
         public DateTime? DueDate { get; set; }
-        public Priority Priority { get; set; }
-        public DomainTaskStatus TaskStatus { get; set; }
+        public Priority Priority { get; set; } = Priority.Medium;
+        public DomainTaskStatus TaskStatus { get; set; } = DomainTaskStatus.ToDo;
 
         public Guid CreatedById { get; set; } // Owner
         public Guid ProjectId { get; set; }
         public Guid? AssignedToId { get; set; }
-
-        public Project Project { get; set; }
-        public UserProfiles UserProfiles { get; set; }
 
         public List<Comment> Comments { get; set; } = new();
         public List<Attachment> Attachments { get; set; } = new();

@@ -6,10 +6,9 @@ namespace TaskManagementSystem.Domain.Entities
     {
         public Guid Id { get; set; }
         public string Title { get; set; } = string.Empty;
-        public DomainTaskStatus TaskStatus { get; set; }
+        public DomainTaskStatus TaskStatus { get; set; } = DomainTaskStatus.ToDo;
 
         public Guid ParentTaskId { get; set; }
-        public UserProfiles ParentTask { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;

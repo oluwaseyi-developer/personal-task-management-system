@@ -11,9 +11,7 @@ namespace TaskManagementSystem.Domain.Entities
         public Guid OwnerId { get; set; }
         public ICollection<Guid> MemberIds { get; set; } = new List<Guid>();
         public List<TaskItem> Tasks { get; set; } = new();
-        public ProjectStatus ProjectStats { get; set; }
-
-        public UserProfiles Owner { get; set; }
+        public ProjectStatus ProjectStats { get; set; } = ProjectStatus.Planning;
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;

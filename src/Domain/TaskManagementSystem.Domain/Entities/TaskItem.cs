@@ -15,6 +15,7 @@ namespace TaskManagementSystem.Domain.Entities
 
         public Guid CreatedById { get; set; } // Owner
         public Guid ProjectId { get; set; }
+        public Project? Project { get; set; }
         public Guid? AssignedToId { get; set; }
 
         public List<Comment> Comments { get; set; } = new();

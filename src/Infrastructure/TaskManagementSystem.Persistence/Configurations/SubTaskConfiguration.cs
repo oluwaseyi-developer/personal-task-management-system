@@ -13,6 +13,11 @@ namespace TaskManagementSystem.Persistence.Configurations
             builder.Property(st => st.Title)
                    .IsRequired()
                    .HasMaxLength(200);
+
+            builder.HasOne(st => st.ParentTask)
+                   .WithMany(t => t.SubTasks)
+                   .HasForeignKey(st => st.ParentTaskId);
+
         }
     }
 }

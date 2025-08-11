@@ -9,7 +9,7 @@ namespace TaskManagementSystem.Domain.Entities
         public DomainTaskStatus TaskStatus { get; set; } = DomainTaskStatus.ToDo;
 
         public Guid ParentTaskId { get; set; }
-        public TaskItem? ParentTask { get; set; }
+        public TaskItem ParentTask { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;

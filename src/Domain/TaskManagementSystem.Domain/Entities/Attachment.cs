@@ -4,7 +4,7 @@
     {
         public Guid Id { get; set; }
         public Guid TaskId { get; set; }
-        public TaskItem? Task { get; set; }
+        public TaskItem Task { get; set; }
         public string FileName { get; set; } = string.Empty;
         public string FilePath { get; set; } = string.Empty; //could be url or storage path
         public string? ContentType { get; set; }

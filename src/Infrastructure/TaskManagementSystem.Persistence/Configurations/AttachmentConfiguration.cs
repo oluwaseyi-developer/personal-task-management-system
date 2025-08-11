@@ -21,6 +21,11 @@ namespace TaskManagementSystem.Persistence.Configurations
             builder.Property(att => att.ContentType)
                    .HasMaxLength(100);
 
+            // ✅ Explicit relationship configuration
+            builder.HasOne(att => att.Task)
+                   .WithMany(task => task.Attachments)
+                   .HasForeignKey(att => att.TaskId);
         }
+
     }
 }

@@ -30,16 +30,16 @@ namespace TaskManagementSystem.Persistence.Configurations
                    .OnDelete(DeleteBehavior.Cascade);
 
             // One Task Has Many Attachment
-            builder.HasMany(ti => ti.Attachments)
-                 .WithOne()
-                 .HasForeignKey(att => att.TaskId)
-                 .OnDelete(DeleteBehavior.Cascade);
+            builder.HasMany(t => t.Attachments)
+                    .WithOne(a => a.Task)
+                    .HasForeignKey(a => a.TaskId)
+                    .OnDelete(DeleteBehavior.Cascade);
 
-            // One Task Has Many SubTask
-            builder.HasMany(ti => ti.SubTasks)
-                 .WithOne()
-                 .HasForeignKey(st => st.ParentTaskId)
-                 .OnDelete(DeleteBehavior.Cascade);
+            builder.HasMany(t => t.SubTasks)
+                   .WithOne(st => st.ParentTask)
+                   .HasForeignKey(st => st.ParentTaskId)
+                   .OnDelete(DeleteBehavior.Cascade);
+
         }
     }
 }

@@ -4,7 +4,7 @@ using TaskManagementSystem.Domain.Entities;
 
 namespace TaskManagementSystem.Persistence.Configurations
 {
-    public class ActivityConfiguration : IEntityTypeConfiguration<ActivityLog>
+    public class ActivityLogConfiguration : IEntityTypeConfiguration<ActivityLog>
     {
         public void Configure(EntityTypeBuilder<ActivityLog> builder)
         {
